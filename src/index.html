@@ -7,7 +7,45 @@
     <link rel="stylesheet" href="./output.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <main>
+        <div>
+            <p>Player <span id="playerScore"></span></p>
+            <p>X</p>
+            <p><span id="machineScore"></span> Machine</p>
+        </div>
+
+        <div id="options">
+            <button class="choice-button" data-choice="rock"><img src="assets/rock.svg" alt="rock"></button>
+            <button class="choice-button" data-choice="paper"><img src="assets/paper.svg" alt="paper"></button>
+            <button class="choice-button" data-choice="scissors"><img src="assets/scissor.svg" alt="scissors"></button>
+        </div>
+
+        <di id="resultDisplay">
+            <div id="playerChoice"></div>
+            <p>X</p>
+            <div id="machineChoice"></div>
+            <p id="result"></p>
+            <button>Play Again</button>
+        </div>
+    </main>
+    <footer>
+        <button id="rulesBtn">Rules</button>
+        <p>Developed by <a href="https://github.com/kauevecchia">Kauê</a>.</p>
+    </footer>
+
+    <div id="rulesModal">
+        <h2>Game rules</h2>
+        <ul>
+            <li>Rock wins against scissors.</li>
+            <li>Scissors wins against paper.</li>
+            <li>Paper wins against rock.</li>
+            <li>If both players select the same option, it's a draw.</li>
+        </ul>
+        <button id="closeButton">Close</button>
+    </div>
 
     <script src="script.js" defer></script>
 </body>
