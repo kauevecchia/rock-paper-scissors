@@ -54,6 +54,19 @@
         <p class="text-white">Developed by <a href="https://github.com/kauevecchia" target="_blank" class="hover:text-yellow-300 hover:underline">Kauê</a>.</p>
     </footer>
 
-    <script src="script.js" defer></script>
+    <div id="rulesModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+        <div class="bg-white p-6 rounded-lg max-w-md w-full z-10">
+            <h2 class="text-xl font-bold mb-4">Game rules</h2>
+            <ul class="mb-4">
+                <li>Rock wins against scissors.</li>
+                <li>Scissors wins against paper.</li>
+                <li>Paper wins against rock.</li>
+                <li>If both players select the same option, it's a draw.</li>
+            </ul>
+            <button id="closeButton" class="w-full px-4 py-2 bg-sky-700 text-white rounded-md">Close</button>
+        </div>
+    </div>
+
+    <script src="main.js" defer></script>
 </body>
 </html>
