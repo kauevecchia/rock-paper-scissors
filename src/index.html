@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./output.css">
 </head>
 <body class="flex items-center justify-center flex-col font-poppins">
+
     <header class="min-h-28 bg-sky-700 w-full flex items-center justify-between p-6 ">
         <h1 class="text-white text-lg font-bold max-w-32">Rock Paper Scissors</h1>
 
@@ -22,6 +23,7 @@
             <button class="px-4 py-2 bg-sky-700 rounded-md text-white">Reset</button>
         </div>
     </header>
+    
     <main class="mt-8 flex items-center justify-center flex-col">
         <div id="options" class="flex gap-4 flex-col items-center">
             <h2 class="text-sky-700 font-bold text-xl">Choose one: </h2>
@@ -46,21 +48,11 @@
             <button class="px-4 py-2 bg-sky-700 rounded-md text-white">Play Again</button>
         </div>
     </main>
-    <footer>
-        <button id="rulesBtn">Rules</button>
-        <p>Developed by <a href="https://github.com/kauevecchia">Kauê</a>.</p>
-    </footer>
 
-    <div id="rulesModal">
-        <h2>Game rules</h2>
-        <ul>
-            <li>Rock wins against scissors.</li>
-            <li>Scissors wins against paper.</li>
-            <li>Paper wins against rock.</li>
-            <li>If both players select the same option, it's a draw.</li>
-        </ul>
-        <button id="closeButton">Close</button>
-    </div>
+    <footer class="flex flex-col items-center justify-center gap-4 p-4 mt-16 bg-sky-700 w-full">
+        <button id="rulesBtn" class="px-4 py-2 bg-orange-500 rounded-md text-white font-bold">Rules</button>
+        <p class="text-white">Developed by <a href="https://github.com/kauevecchia" target="_blank" class="hover:text-yellow-300 hover:underline">Kauê</a>.</p>
+    </footer>
 
     <script src="script.js" defer></script>
 </body>
