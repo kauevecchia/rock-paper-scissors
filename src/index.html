@@ -47,13 +47,13 @@
                     <img id="machineChoice" class="w-28 h-28 md:w-32 md:h-32" src="assets/scissors.svg" alt="machine choice">
                 </div>
             </div>
-            <p id="result" class="text-center font-bold text-xl md:text-2xl">PLAYER LOSE!</p>
+            <p id="result" class="text-center font-bold text-xl md:text-2xl"></p>
             <button class="px-4 py-2 bg-sky-700 rounded-md text-white md:text-2xl md:px-6 md:py-3">Play Again</button>
         </div>
     </main>
 
     <footer class="flex flex-col items-center justify-center gap-4 p-4 mt-16 bg-sky-700 w-full">
-        <button id="rulesBtn" class="px-4 py-2 bg-orange-500 rounded-md text-white font-bold">Rules</button>
+        <button id="rulesBtn" class="px-4 py-2 bg-red-600 rounded-md text-white font-bold hover:bg-red-700 transition duration-300">Rules</button>
         <p class="text-white">Developed by <a href="https://github.com/kauevecchia" target="_blank" class="hover:text-yellow-300 hover:underline">Kauê</a>.</p>
     </footer>
 
@@ -62,14 +62,14 @@
             <h2 class="text-xl font-bold mb-4">Game rules</h2>
             <ul class="mb-4">
                 <li>Rock wins against scissors.</li>
-                <li>Scissors wins against paper.</li>
                 <li>Paper wins against rock.</li>
+                <li>Scissors wins against paper.</li>
                 <li>If both players select the same option, it's a draw.</li>
             </ul>
-            <button id="closeButton" class="w-full px-4 py-2 bg-sky-700 text-white rounded-md">Close</button>
+            <button id="closeButton" class="w-full px-4 py-2 bg-red-600 hover:bg-red-700 transition duration-200 text-white rounded-md">Close</button>
         </div>
     </div>
 
-    <script src="main.js" defer></script>
+    <script type="module" src="main.js" defer></script>
 </body>
 </html>
