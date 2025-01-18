@@ -20,33 +20,35 @@
                     <p class="text-sm md:text-base">Player: <span id="playerScore">0</span></p>
                     <p class="text-sm md:text-base">Machine: <span id="machineScore">0</span> </p>
                 </div>
-                <button class="px-4 py-2 bg-sky-700 rounded-md text-white">Reset</button>
+                <button class="px-4 py-2 bg-sky-700 rounded-md text-white hover:bg-sky-900 transition duration-200">Reset</button>
             </div>
         </div>
     </header>
     
     <main class="mt-8 flex items-center justify-center flex-col gap-6 flex-grow">
-        <div id="options" class="flex gap-4 flex-col items-center">
-            <h2 class="text-sky-700 font-bold text-xl">Choose one: </h2>
-            <button class="choice-button w-24 h-24" data-choice="rock"><img src="assets/rock.svg" alt="rock"></button>
-            <button class="choice-button w-24 h-24" data-choice="paper"><img src="assets/paper.svg" alt="paper"></button>
-            <button class="choice-button w-24 h-24" data-choice="scissors"><img src="assets/scissors.svg" alt="scissors"></button>
+        <div id="optionsContainer" class="flex flex-col items-center justify-center">
+            <h2 class="text-sky-700 font-bold text-2xl mb-4 md:text-3xl">Choose one: </h2>
+            <div id="options" class="flex gap-4 md:gap-6 flex-col md:flex-row items-center">
+                <button class="choice-button w-24 h-24 md:w-28 md:h-28 hover:scale-110 transition duration-300 ease-in-out" data-choice="rock"><img src="assets/rock.svg" alt="rock"></button>
+                <button class="choice-button w-24 h-24 md:w-28 md:h-28 hover:scale-110 transition duration-300 ease-in-out" data-choice="paper"><img src="assets/paper.svg" alt="paper"></button>
+                <button class="choice-button w-24 h-24 md:w-28 md:h-28 hover:scale-110 transition duration-300 ease-in-out" data-choice="scissors"><img src="assets/scissors.svg" alt="scissors"></button>
+            </div>
         </div>
 
-        <div id="resultDisplay" class="flex flex-col gap-2 items-center justify-center">
+        <div id="resultDisplay" class="flex flex-col gap-2 items-center justify-center hidden">
             <div id="choicesDisplay" class="flex items-center justify-center gap-6">
                 <div class="flex flex-col gap-2">
-                    <h2 class="font-bold text-2xl">Player:</h2>
-                    <img id="playerChoice" class="w-28 h-28" src="assets/paper.svg" alt="player choice">
+                    <h2 class="font-bold text-2xl md:text-3xl">Player:</h2>
+                    <img id="playerChoice" class="w-28 h-28 md:w-32 md:h-32" src="assets/paper.svg" alt="player choice">
                 </div>
                 <p class="text-4xl font-bold">X</p>
                 <div class="flex flex-col gap-2">
-                    <h2 class="font-bold text-2xl">Machine:</h2>
-                    <img id="machineChoice" class="w-28 h-28" src="assets/scissors.svg" alt="machine choice">
+                    <h2 class="font-bold text-2xl md:text-3xl">Machine:</h2>
+                    <img id="machineChoice" class="w-28 h-28 md:w-32 md:h-32" src="assets/scissors.svg" alt="machine choice">
                 </div>
             </div>
-            <p id="result" class="text-center font-bold text-xl">PLAYER LOSE!</p>
-            <button class="px-4 py-2 bg-sky-700 rounded-md text-white">Play Again</button>
+            <p id="result" class="text-center font-bold text-xl md:text-2xl">PLAYER LOSE!</p>
+            <button class="px-4 py-2 bg-sky-700 rounded-md text-white md:text-2xl md:px-6 md:py-3">Play Again</button>
         </div>
     </main>
 
