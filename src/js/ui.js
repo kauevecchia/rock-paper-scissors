@@ -9,6 +9,7 @@ const optionsDisplay = document.getElementById("optionsContainer")
 const rulesModal = document.getElementById("rulesModal")
 const machineChoiceImg = document.getElementById("machineChoice")
 const playerChoiceImg = document.getElementById("playerChoice")
+const errorDisplay = document.getElementById("errorDisplay")
 
 
 export function updateResult() {
@@ -28,12 +29,24 @@ export function updateResult() {
     }
 }
 
+export function toggleErrorDisplay() {
+    if(!errorDisplay.classList.contains("hidden")) {
+        errorDisplay.classList.add("hidden")
+    } else {
+        errorDisplay.classList.remove("hidden")
+    }
+}
+
 export function updateScoreboard() {
     playerScore.textContent = gameState.playerScore
     machineScore.textContent = gameState.machineScore
 }
 
 export function toggleGameView() {
+    if(!errorDisplay.classList.contains("hidden")) {
+        return
+    }
+
     if (resultDisplay.classList.contains("hidden")) {
         resultDisplay.classList.remove("hidden")
         optionsDisplay.classList.add("hidden")
