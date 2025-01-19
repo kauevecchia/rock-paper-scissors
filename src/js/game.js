@@ -38,3 +38,13 @@ export function playGame(playerChoice) {
     return gameState
 }
 
+export function resetGame() {
+    gameState.result = "";
+    gameState.playerChoice = "";
+    gameState.machineChoice = "";
+}
+
+export function resetScores() {
+    gameState.playerScore = 0
+    gameState.machineScore = 0
+}
