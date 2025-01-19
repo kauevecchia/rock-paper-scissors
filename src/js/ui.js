@@ -27,3 +27,8 @@ export function updateResult() {
         resultText.textContent = gameState.result
     }
 }
+
+export function updateScoreboard() {
+    playerScore.textContent = gameState.playerScore
+    machineScore.textContent = gameState.machineScore
+}
