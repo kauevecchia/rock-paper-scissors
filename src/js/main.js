@@ -27,3 +27,7 @@ choiceButtons.forEach(button => {
 rulesBtn.addEventListener("click", showRulesModal)
 closeBtn.addEventListener("click", showRulesModal)
 playAgainBtn.addEventListener("click", toggleGameView)
+resetBtn.addEventListener("click", () => {
+    resetScores()
+    updateScoreboard()
+})
