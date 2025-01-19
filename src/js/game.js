@@ -1,3 +1,5 @@
+import { toggleErrorDisplay } from "./ui.js"
+
 export const gameState = {
     playerScore: 0,
     machineScore: 0,
@@ -6,12 +8,21 @@ export const gameState = {
     result: ""
 }
 
+let lastRock = false
+
 export function playGame(playerChoice) {
     const choices = ["rock", "paper", "scissors"]
     const machineChoice = choices[Math.floor(Math.random() * choices.length)]
 
     gameState.playerChoice = playerChoice
     gameState.machineChoice = machineChoice
+
+    if(playerChoice === "rock" && lastRock === true) {
+        toggleErrorDisplay()
+        return
+    }
+
+    lastRock = (playerChoice === "rock")
 
     if (playerChoice === machineChoice) {
         gameState.result = "IT'S A TIE"
