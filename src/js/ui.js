@@ -43,3 +43,10 @@ export function toggleGameView() {
     }
 }
 
+export function showRulesModal() {
+    if (rulesModal.classList.contains("hidden")) {
+        rulesModal.classList.remove("hidden")
+    } else {
+        rulesModal.classList.add("hidden")
+    }
+}
