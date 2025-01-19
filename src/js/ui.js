@@ -32,3 +32,14 @@ export function updateScoreboard() {
     playerScore.textContent = gameState.playerScore
     machineScore.textContent = gameState.machineScore
 }
+
+export function toggleGameView() {
+    if (resultDisplay.classList.contains("hidden")) {
+        resultDisplay.classList.remove("hidden")
+        optionsDisplay.classList.add("hidden")
+    } else {
+        resultDisplay.classList.add("hidden")
+        optionsDisplay.classList.remove("hidden")
+    }
+}
+
