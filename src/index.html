@@ -35,6 +35,13 @@
             </div>
         </div>
 
+        <div id="errorDisplay" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+            <div class="flex items-center justify-center flex-col gap-4 bg-white rounded-md p-4">
+                <p class="font-bold text-red-600 text-center">It's not allowed to choose rock twice in a row.</p>
+                <button id="closeErrorDisplay" class="px-4 py-2 rounded-md font-bold bg-sky-700 text-white">Close</button>
+            </div>
+        </div>
+
         <div id="resultDisplay" class="flex flex-col gap-2 items-center justify-center hidden animate-slideDownMb md:animate-slideDown">
             <div id="choicesDisplay" class="flex items-center justify-center gap-6">
                 <div class="flex flex-col gap-2">
@@ -65,8 +72,9 @@
                 <li>Paper wins against rock.</li>
                 <li>Scissors wins against paper.</li>
                 <li>If both players select the same option, it's a draw.</li>
+                <li class="font-bold text-red-600">**You can't select rock twice in a row.**</li>
             </ul>
-            <button id="closeBtn" class="w-full px-4 py-2 bg-red-600 hover:bg-red-700 transition duration-200 text-white rounded-md">Close</button>
+            <button id="closeBtn" class="w-full px-4 py-2 bg-sky-600 hover:bg-sky-700 transition duration-200 text-white rounded-md">Close</button>
         </div>
     </div>
 
