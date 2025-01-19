@@ -24,3 +24,5 @@ choiceButtons.forEach(button => {
     })
 })
 
+rulesBtn.addEventListener("click", showRulesModal)
+closeBtn.addEventListener("click", showRulesModal)
